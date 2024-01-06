@@ -23,7 +23,6 @@ io.on('connection', (socket) => {
     
     //Message Recieved
     socket.on('message', (message) =>{
-        // const with_name = users[socket.id] + ": " + message;
         socket.broadcast.emit('messageRecieved', users[socket.id] + ": " + message);
     })
     console.log('a user connected: ', socket.id);

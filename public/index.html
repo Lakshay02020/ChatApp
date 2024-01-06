@@ -15,8 +15,8 @@
     </div>
 
     <div class="send">
-            <input type="text" name="sendMessage" id = "sendMessage" class = "sendMessage" placeholder="Type your message here...">
-            <button id = "sendButton">Send</button>
+        <input type="text" name="sendMessage" id = "sendMessage" class = "sendMessage" placeholder="Type your message here...">
+        <button id = "sendButton">Send</button>
     </div>
     
     <script src="/socket.io/socket.io.js"></script>
@@ -48,7 +48,7 @@
         sendButton.addEventListener("click", (event) =>{
             const message = sendMessage.value;
             sendMessage.value = "";
-            append(message, 'right');
+            append("You: " + message, 'right');
             socket.emit('message', (message));
         })
     </script>
