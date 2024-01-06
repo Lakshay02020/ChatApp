@@ -18,13 +18,13 @@ io.on('connection', (socket) => {
     socket.on('new-user-joined', (name) =>{
         console.log("New User", name);
         users[socket.id] = name;
-        socket.broadcast.emit('messageRecieved', {"message" : (`${name} joined the chat`), "name" : users[socket.id]} );
+        socket.broadcast.emit('messageRecieved', (`${name} joined the chat`));
     });
     
     //Message Recieved
     socket.on('message', (message) =>{
-        console.log(message, ": FROM CLIENT");
-        socket.broadcast.emit('messageRecieved', {"message" : message, "name" : users[socket.id]});
+        // const with_name = users[socket.id] + ": " + message;
+        socket.broadcast.emit('messageRecieved', users[socket.id] + ": " + message);
     })
     console.log('a user connected: ', socket.id);
 });
