@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Application</title>
     <link type="text/css" href="./css/style.css" rel="stylesheet">
-    <script type="text/javascript" defer src = './js/client.js'></script>
+    <script type="text/javascript" defer src='./js/client.js'></script>
 </head>
 
 <body>
     <nav></nav>
     <div class="container">
-        <div class="message right"> Chat Initiated !!</div>
+        <div class="message-wrapper">
+            <div class="message right"> Welcome to the chat !!</div>
+        </div>
     </div>
 
     <div class="send">
-        <input type="text" name="sendMessage" id = "sendMessage" class = "sendMessage" placeholder="Type your message here...">
-        <button id = "sendButton">Send</button>
+        <input type="text" name="sendMessage" id="sendMessage" class="sendMessage" placeholder="Type your message here...">
+        <button id="sendButton">Send</button>
     </div>
-    
+
     <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>

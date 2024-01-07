@@ -1,48 +1,86 @@
-.container{
-    max-width: 1000px;
-    margin: auto;  
-    padding: 5px;
-    background-color: rgb(184, 172, 172);
-    height: 60vh;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    height: 80vh;
+    overflow-y: auto;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url('../images/bg.jpg'); /* Replace 'your-image-url.jpg' with the actual image URL */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
 }
 
 .message {
-    padding: 5px;
-    background-color: white;
+    padding: 10px;
     margin: 10px;
-    width: 30%;
-    border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 5px;
+    max-width: 50%; 
+    word-wrap: break-word;
 }
 
-.left{
-    float: left;
-    clear: both;
+.left {
+    max-width: 50%;
+    background-color: #3498db;
+    color: #fff;
+    align-self: flex-start;
 }
 
-.right{
-    float: right;
-    clear: both;
+.right {
+    max-width: 50%;
+    background-color: #4CAF50;
+    margin-left: auto;
+    color: #fff;
+    align-self: flex-end;
 }
 
-#sendContainer{
-    display: block;
-    margin: auto;
-    text-align: center;
+.send {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.sendMessage{
-    display: block;
-    margin: auto;
-    text-align: center;
-    max-width: 985px;
-    width: 100%;
+.message-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 60vh; /* Set a maximum height for the message wrapper */
+    overflow-y: auto; /* Add scrollbar if content exceeds the specified height */
 }
 
-.send{
-    margin: auto;  /* Set margin to auto for horizontal centering */
-    padding: 2px;
-    max-width: 950px;
-    width: 80%;
-    display: inline-block;
+
+.sendMessage {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 100%; /* Set the width to 100% to fill the container */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+#sendButton {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background-color: #45a049;
 }

@@ -5,10 +5,13 @@ const sendMessage = document.getElementById('sendMessage');
 const append = (message, position) => {
     const messageElement = document.createElement('div');
     const container = document.querySelector('.container');
+    const wrapper = document.querySelector('.message-wrapper')
+
     messageElement.innerText = message;
     messageElement.classList.add('message');
     messageElement.classList.add(position);
-    container.append(messageElement);
+    wrapper.append(messageElement);
+    container.append(wrapper);
 }
 
 const name = prompt("Enter your name to join the chat");
